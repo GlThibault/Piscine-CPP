@@ -6,7 +6,7 @@
 /*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/26 14:00:06 by tglandai          #+#    #+#             */
-/*   Updated: 2018/03/26 16:20:02 by tglandai         ###   ########.fr       */
+/*   Updated: 2018/03/26 17:25:30 by tglandai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Contact::Contact(void) {
     std::cin >> this->login;
     std::cout << "Enter your postal address : ";
     std::cin >> this->postalAddress;
-    std::cout << "Enter your emaila ddress : ";
+    std::cout << "Enter your email address : ";
     std::cin >> this->emailAddress;
     std::cout << "Enter your phone number : ";
     std::cin >> this->phoneNumber;
@@ -41,7 +41,6 @@ Contact::Contact(void) {
 }
 
 Contact::~Contact(void) {
-    std::cout << "Contact Desctuctor" << std::endl;
     return;
 }
 

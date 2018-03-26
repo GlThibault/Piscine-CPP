@@ -10,7 +10,6 @@
 #                                                                              #
 # **************************************************************************** #
 
-
 NAME = phonebook
 
 SRC = phonebook.cpp Contact.class.cpp
@@ -22,9 +21,12 @@ CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $
-	$(CC) $(CFLAGS) -c $(SRC) $(CPPFLAGS) -o $(OBJ)
-	$(CC) $(LDFLAGS) $(LDLIBS) $(OBJ) -o $(NAME)
+$(NAME): $(OBJ)
+	# $(CC) $(CFLAGS) -c $(SRC) $(CPPFLAGS) -o $(OBJ)
+	$(CC) $(LDFLAGS) $^ -o $@
+
+%.o: %.c
+	@$(CC) $(CFLAGS) -c $< $(CPPFLAGS) -o $@
 
 clean:
 	rm -f $(OBJ)
