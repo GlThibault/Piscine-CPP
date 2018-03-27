@@ -6,7 +6,7 @@
 /*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/26 11:04:53 by tglandai          #+#    #+#             */
-/*   Updated: 2018/03/26 19:03:22 by tglandai         ###   ########.fr       */
+/*   Updated: 2018/03/27 14:58:06 by tglandai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,16 +40,6 @@ int Account::getNbAccounts(void) {
 
 int Account::getTotalAmount(void) {
     return Account::_totalAmount;
-}
-
-int Account::getNbDeposits(void) {
-    // return Account::_nbDeposits;
-    return 0;
-}
-
-int Account::getNbWithdrawals(void) {
-    // return Account::_nbWithdrawals;
-    return 0;
 }
 
 void Account::displayAccountsInfos(void) {

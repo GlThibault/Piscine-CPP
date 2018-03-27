@@ -22,7 +22,6 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	# $(CC) $(CFLAGS) -c $(SRC) $(CPPFLAGS) -o $(OBJ)
 	$(CC) $(LDFLAGS) $^ -o $@
 
 %.o: %.c
