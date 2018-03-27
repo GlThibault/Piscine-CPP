@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/27 15:04:38 by tglandai          #+#    #+#             */
-/*   Updated: 2018/03/27 15:06:23 by tglandai         ###   ########.fr       */
+/*   Created: 2018/03/27 15:12:30 by tglandai          #+#    #+#             */
+/*   Updated: 2018/03/27 16:03:57 by tglandai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
+
 #include <iostream>
-#include "Pony.hpp"
 
-Pony::Pony(void) {
-    std::cout << "Apparition of a pony" << std::endl;
-    return;
-}
+class Zombie {
+    public:
+        Zombie(std::string name, std::string type);
+        ~Zombie(void);
+        
+        void announce(void);
+        std::string getName(void);
+        std::string getType(void);
+        void setName(std::string name);
+        void setType(std::string type);
 
-Pony::~Pony(void) {
-    std::cout << "Death of a pony" << std::endl;
-    return;
-}
+        
+    private:
+        std::string _name;
+        std::string _type;
+};
 
-void Pony::setName(std::string str) {
-    this->_name = str;
-    return ;
-}
-
-std::string Pony::getName(void) {
-    return (this->_name);
-}
+#endif

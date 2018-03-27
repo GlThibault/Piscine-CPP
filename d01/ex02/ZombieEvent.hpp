@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.cpp                                           :+:      :+:    :+:   */
+/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/27 15:04:38 by tglandai          #+#    #+#             */
-/*   Updated: 2018/03/27 15:06:23 by tglandai         ###   ########.fr       */
+/*   Created: 2018/03/27 15:21:07 by tglandai          #+#    #+#             */
+/*   Updated: 2018/03/27 16:34:19 by tglandai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef ZOMBIEEVENT_HPP
+#define ZOMBIEEVENT_HPP
+
 #include <iostream>
-#include "Pony.hpp"
+#include "Zombie.hpp"
 
-Pony::Pony(void) {
-    std::cout << "Apparition of a pony" << std::endl;
-    return;
-}
+class ZombieEvent {
+    public:
+        ZombieEvent(void);
+        ~ZombieEvent(void);
+        Zombie* newZombie(std::string name);
+        Zombie* randomChump(void);
+        void setZombieType(Zombie *zombie, std::string type);
+};
 
-Pony::~Pony(void) {
-    std::cout << "Death of a pony" << std::endl;
-    return;
-}
-
-void Pony::setName(std::string str) {
-    this->_name = str;
-    return ;
-}
-
-std::string Pony::getName(void) {
-    return (this->_name);
-}
+#endif

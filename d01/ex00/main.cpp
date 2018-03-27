@@ -1,20 +1,32 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/03/27 15:04:39 by tglandai          #+#    #+#             */
+/*   Updated: 2018/03/27 15:04:39 by tglandai         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <iostream>
 #include "Pony.hpp"
 
-ponyOnTheHeap(void) {
+void ponyOnTheHeap(void) {
     Pony *heapPony = new Pony();
 
     heapPony->setName("heapPony");
-    std::count << "Name : " << heapPony->getName() << std::endl;
+    std::cout << "Name : " << heapPony->getName() << std::endl;
+
+    delete heapPony;
 }
 
-ponyOnTheStack(void) {
+void ponyOnTheStack(void) {
     Pony stackPony;
 
     stackPony.setName("stackPony");
-    std::count << "Name : " << stackPony->getName() << std::endl;
+    std::cout << "Name : " << stackPony.getName() << std::endl;
 
 }
 
