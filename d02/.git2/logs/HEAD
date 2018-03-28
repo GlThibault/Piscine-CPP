@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 001077d046ac69208dfab2624c501e55050bad68 Thibault GLANDAIS <tglandai@student.42.fr> 1522235657 +0200	commit (initial): ex00
+001077d046ac69208dfab2624c501e55050bad68 bfa25d6fb72daff991b848a0b9a4f9274c2f48d1 Thibault GLANDAIS <tglandai@student.42.fr> 1522243382 +0200	commit: ex01 - ex02
+bfa25d6fb72daff991b848a0b9a4f9274c2f48d1 bfa25d6fb72daff991b848a0b9a4f9274c2f48d1 Thibault GLANDAIS <tglandai@student.42.fr> 1522243419 +0200	reset: moving to HEAD
+bfa25d6fb72daff991b848a0b9a4f9274c2f48d1 79d69ba627bdaede18dc57a91474384b2b95b3d2 Thibault GLANDAIS <tglandai@student.42.fr> 1522243430 +0200	commit: rm main.cpp

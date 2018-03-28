@@ -6,15 +6,13 @@
 /*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 15:11:44 by tglandai          #+#    #+#             */
-/*   Updated: 2018/03/27 16:44:13 by tglandai         ###   ########.fr       */
+/*   Updated: 2018/03/28 11:10:41 by tglandai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name, std::string type) {
-    setName(name);
-    setType(type);
+Zombie::Zombie(std::string name, std::string type) : _name(name), _type(type) {
     announce();
     return;
 }
