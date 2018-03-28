@@ -6,15 +6,13 @@
 /*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 18:07:03 by tglandai          #+#    #+#             */
-/*   Updated: 2018/03/27 19:00:24 by tglandai         ###   ########.fr       */
+/*   Updated: 2018/03/28 16:24:39 by tglandai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name): {
-    this->_name = name;
-    this->_weapon = Weapon("default");
+HumanB::HumanB(std::string name): _name(name) {
     return;
 }
 
@@ -23,14 +21,18 @@ HumanB::~HumanB(void) {
 }
 
 void HumanB::attack(void) {
-    std::cout << getName() << " attacks with his " << getWeapon() << ::std::endl;
+    std::cout << getName() << " attacks with his " << getWeapon().type << ::std::endl;
+}
+
+std::string HumanB::getName(void) {
+    return this->_name;
 }
 
 Weapon HumanB::getWeapon(void) {
-    return this->_weapon;
+    return *(this->_weapon);
 }
 
 void HumanB::setWeapon(Weapon weapon) {
-    this->_weapon = weapon;
+    this->_weapon = &weapon;
     return;
 }

@@ -6,7 +6,7 @@
 /*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 18:41:09 by tglandai          #+#    #+#             */
-/*   Updated: 2018/03/27 18:56:41 by tglandai         ###   ########.fr       */
+/*   Updated: 2018/03/28 16:22:10 by tglandai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ class HumanB {
         void setWeapon(Weapon weapon);
 
     private:
-        Weapon _weapon;
         std::string _name;
+        Weapon* _weapon;
 };
 
 #endif

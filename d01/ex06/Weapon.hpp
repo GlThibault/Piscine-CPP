@@ -6,7 +6,7 @@
 /*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 18:38:26 by tglandai          #+#    #+#             */
-/*   Updated: 2018/03/27 18:53:35 by tglandai         ###   ########.fr       */
+/*   Updated: 2018/03/28 16:19:38 by tglandai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ class Weapon {
     public:
         Weapon(std::string type);
         ~Weapon(void);
+        
         std::string const &getType(void);
-        std::string const type;
+        std::string type;
         void setType(std::string type);
 };
 
