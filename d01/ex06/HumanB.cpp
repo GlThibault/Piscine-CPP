@@ -6,7 +6,7 @@
 /*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 18:07:03 by tglandai          #+#    #+#             */
-/*   Updated: 2018/03/28 16:24:39 by tglandai         ###   ########.fr       */
+/*   Updated: 2018/03/28 19:57:06 by tglandai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Weapon HumanB::getWeapon(void) {
     return *(this->_weapon);
 }
 
-void HumanB::setWeapon(Weapon weapon) {
+void HumanB::setWeapon(Weapon &weapon) {
     this->_weapon = &weapon;
     return;
 }
