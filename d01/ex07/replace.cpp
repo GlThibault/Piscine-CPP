@@ -6,7 +6,7 @@
 /*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/28 17:17:22 by tglandai          #+#    #+#             */
-/*   Updated: 2018/03/28 21:52:34 by tglandai         ###   ########.fr       */
+/*   Updated: 2018/03/29 08:30:13 by tglandai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <sstream>
 
 std::string     toupper(std::string str) {
-    for (int i = 0; i < str.length(); i++)
+    for (size_t i = 0; i < str.length(); i++)
             str[i] = std::toupper(str[i]);
     return str;
 }

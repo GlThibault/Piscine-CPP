@@ -6,7 +6,7 @@
 /*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/28 21:01:17 by tglandai          #+#    #+#             */
-/*   Updated: 2018/03/28 21:41:40 by tglandai         ###   ########.fr       */
+/*   Updated: 2018/03/29 08:43:14 by tglandai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ void Logger::logToConsole(std::string const & str) {
 }
 
 void Logger::logToFile(std::string const & str) {
-    std::ofstream ofs(this->_filename);
-    ofs << str;
+    std::ofstream ofs(this->_filename, std::ios::app);
+    ofs << makeLogEntry(str) << std::endl;
     ofs.close();
 }
 
