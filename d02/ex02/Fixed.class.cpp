@@ -6,7 +6,7 @@
 /*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/28 11:58:34 by tglandai          #+#    #+#             */
-/*   Updated: 2018/03/28 15:21:04 by tglandai         ###   ########.fr       */
+/*   Updated: 2018/03/29 09:27:31 by tglandai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ Fixed::Fixed(void): _n(0) {
 
 Fixed::Fixed(const int n) {
 
-    std::cout << n << std::endl;
     std::cout << "Int Constructor called" << std::endl;
 	setRawBits(n << _fractBits);
     return;
