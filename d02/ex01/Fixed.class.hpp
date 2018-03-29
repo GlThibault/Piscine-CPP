@@ -6,7 +6,7 @@
 /*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/28 11:58:35 by tglandai          #+#    #+#             */
-/*   Updated: 2018/03/28 13:38:59 by tglandai         ###   ########.fr       */
+/*   Updated: 2018/03/29 18:06:02 by tglandai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ class Fixed {
 
         int     getRawBits(void) const;
         void    setRawBits(int const raw);
-        
         float   toFloat(void) const;
         int     toInt(void) const;
 
@@ -39,6 +38,6 @@ class Fixed {
         static const int _fractBits = 8;
 };
 
-std::ostream &     operator<<(std::ostream & o, Fixed const & rhs );
+std::ostream &     operator<<(std::ostream & o, Fixed const & rhs);
 
 #endif

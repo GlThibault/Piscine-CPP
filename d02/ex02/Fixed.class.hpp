@@ -6,7 +6,7 @@
 /*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/28 11:58:35 by tglandai          #+#    #+#             */
-/*   Updated: 2018/03/28 14:51:00 by tglandai         ###   ########.fr       */
+/*   Updated: 2018/03/29 18:07:32 by tglandai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ class Fixed {
 
         int     getRawBits(void) const;
         void    setRawBits(int const raw);
-        
         float   toFloat(void) const;
         int     toInt(void) const;
 

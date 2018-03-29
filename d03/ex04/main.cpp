@@ -6,7 +6,7 @@
 /*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/29 09:36:54 by tglandai          #+#    #+#             */
-/*   Updated: 2018/03/29 14:06:07 by tglandai         ###   ########.fr       */
+/*   Updated: 2018/03/29 18:01:11 by tglandai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,27 @@ int main(void) {
     ninjaTrap.takeDamage(60);
     ninjaTrap.takeDamage(50);
 
+    SuperTrap superTrap("SuperTrap");
+
+    superTrap.meleeAttack("Enemy3");
+    superTrap.rangedAttack("Enemy3");
+
+    superTrap.ninjaShoebox(fragTrap);
+    superTrap.takeDamage(30);
+    superTrap.ninjaShoebox(scavTrap);
+    superTrap.ninjaShoebox(ninjaTrap);
+    superTrap.ninjaShoebox(superTrap);
+
+    superTrap.beRepaired(40);
+    superTrap.beRepaired(40);
+    superTrap.takeDamage(50);
+    superTrap.takeDamage(60);
+    superTrap.takeDamage(50);
+    superTrap.vaulthunter_dot_exe("Enemy1");
+    superTrap.vaulthunter_dot_exe("Enemy1");
+    superTrap.vaulthunter_dot_exe("Enemy1");
+    superTrap.takeDamage(30);
+    superTrap.vaulthunter_dot_exe("Enemy1");
+    superTrap.vaulthunter_dot_exe("Enemy1");
     return 0;
 }
