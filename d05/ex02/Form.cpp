@@ -6,7 +6,7 @@
 /*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 15:13:12 by tglandai          #+#    #+#             */
-/*   Updated: 2018/04/02 16:17:13 by tglandai         ###   ########.fr       */
+/*   Updated: 2018/04/02 17:47:45 by tglandai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,16 @@ void Form::beSigned(Bureaucrat &bureaucrat)
 std::string Form::getName(void) const
 {
     return this->_name;
+}
+
+std::string Form::getTarget(void) const
+{
+    return this->_target;
+}
+
+void Form::setTarget(std::string target)
+{
+    this->_target = target;
 }
 
 bool Form::getIsSigned(void) const

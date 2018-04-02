@@ -6,7 +6,7 @@
 /*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 15:13:19 by tglandai          #+#    #+#             */
-/*   Updated: 2018/04/02 16:17:18 by tglandai         ###   ########.fr       */
+/*   Updated: 2018/04/02 17:47:44 by tglandai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,11 @@ public:
   ~Form(void);
 
   void beSigned(Bureaucrat &bureaucrat);
+  virtual void execute(Bureaucrat const &) const = 0;
+
   std::string getName(void) const;
+  std::string getTarget(void) const;
+  void setTarget(std::string target);
   bool getIsSigned(void) const;
   int getSigningRequiredGrade(void) const;
   int getExecuteRequireGrade(void) const;
@@ -54,7 +58,8 @@ public:
   };
 
 private:
-  std::string _name;
+  std::string _name,
+      _target;
   bool _isSigned;
   int _signingRequiredGrade;
   int _executeRequireGrade;

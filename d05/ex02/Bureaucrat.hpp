@@ -28,6 +28,7 @@ public:
   ~Bureaucrat(void);
 
   void signForm(Form &form);
+  void executeForm(Form const &src) const;
   std::string getName(void) const;
   int getGrade(void) const;
   void promoteGrade(void);

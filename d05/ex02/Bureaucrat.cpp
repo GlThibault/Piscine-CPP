@@ -70,7 +70,7 @@ void Bureaucrat::demoteGrade(void)
 
 void Bureaucrat::signForm(Form &form)
 {
-    if (this->_grade <= form.getSigningRequiredGrade() && form.getIsSigned() == 0)
+    if (this->_grade <= form.getSigningRequiredGrade())
     {
         std::cout << this->_name << " signs " << form.getName() << std::endl;
         form.beSigned(*this);
@@ -79,6 +79,17 @@ void Bureaucrat::signForm(Form &form)
     {
         std::cout << this->_name << " cannot sign " << form.getName() << " because his grade is too low." << std::endl;
     }
+}
+
+void Bureaucrat::executeForm(Form const &src) const
+{
+    if (this->getGrade() < src.getExecuteRequireGrade())
+    {
+        std::cout << this->_name << " executes " << src.getTarget() << "." << std::endl;
+        src.execute(*this);
+    }
+    else
+        std::cout << "Bureaucrat grade is too low." << std::endl;
 }
 
 Bureaucrat::GradeTooHighException::GradeTooHighException() {}
